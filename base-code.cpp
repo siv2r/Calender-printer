@@ -150,10 +150,19 @@ void neatprint(node *C){
 int main(){
 	int year, first_day;
 	int month;
-	cout<<"Enter year and the first day of that year :"<<"\n"
-			<<"Example: 1999 3"<<"\n"<<"year first_day :";
-	cin>>year>>first_day;
-	cout<<"\n\n";
+	cout<<"Enter the year for calender : ";
+	cin>>year;
+	cout<<"Enter the starting day of the year in the below specified format\n";
+	cout<<"Format : \n";
+	cout<<"Sun  -> 0\n"
+	    <<"Mon  -> 1\n"
+	    <<"Tue  -> 2\n"
+	    <<"Wed  -> 3\n"
+	    <<"Thur -> 4\n"
+	    <<"Fri  -> 5\n"
+	    <<"Sat  -> 6\n"; 
+	cout<<"Now Enter the starting day : ";
+	cin>>first_day;
 	node* C = initcal();
 	for(int i=0; i<12; i++){
 		first_day = storemonth(C, i, first_day, year);
